@@ -1,0 +1,30 @@
+# Customize this file to reference your own directory structure and options
+files: # Your local data paths
+  root: "data/" # your local base path to datasets
+  # segmentation data
+  source_seg: ""
+  target_seg: ""
+  # classification data
+  source_class: "."
+  target_class: "."
+
+train:
+  model: "segmentation" # "segmentation" or "classification"
+  mode: "tuning" # "tuning" for hyperparameter tuning or "training" for full training run
+
+seg_config: # segmentation hyperparameters
+  batch_size: 64
+  epochs: 5
+  lr: 0.1
+
+class_config: # classification hyperparameters
+  batch_size: 64
+  epochs: 5
+  lr: 0.1
+
+seg_tuning:
+  # list example for hyperparameter tuning, we can change this for a different format
+  lr_range:
+    - 0.1
+    - 0.01
+    - 0.001

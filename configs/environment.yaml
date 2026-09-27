@@ -1,0 +1,11 @@
+name: deepbreath
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - matplotlib
+  - pip
+  - pip:
+#    - torch
+#    - torchvision
+    - numpy
